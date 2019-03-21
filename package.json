@@ -1,6 +1,6 @@
 {
   "name": "somiibo",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "The official library for Somiibo. Develop your own modules for the Somiibo platform.",
   "main": "index.js",
   "scripts": {

@@ -5,15 +5,6 @@ var bot = (function() {
   const remote = require('electron').remote;
   const _ = require('lodash');
 
-  // const storage = require('electron-json-storage');
-
-  // var temp_dbPath = (ipcRenderer.sendSync('getGlobal', 'mainState').path_userData)
-  // const low = require('lowdb')
-  // const FileSync = require('lowdb/adapters/FileSync')
-  // const adapter = new FileSync(temp_dbPath + 'db.json')
-  // const db = low(adapter)
-  // const db_stats = low(new FileSync(temp_dbPath + 'db_stats.json'))
-
   // New Database (0.2.21)
   var temp_dbPath = (ipcRenderer.sendSync('getGlobal', 'mainState').path_userDataDir)
   const low = require('lowdb')
@@ -21,8 +12,6 @@ var bot = (function() {
   const db = low(new FileSync(temp_dbPath + 'db_settings.json'))
   const db_stats = low(new FileSync(temp_dbPath + 'db_stats.json'))
 
-  // const defaultSettingsAll = require('../meta/bot-settings.json');
-  // const defaultSettingsAll = remote.getGlobal('mainState').datastorage.bot_meta.bot_settings
   const defaultSettingsAll = ipcRenderer.sendSync('getGlobal', 'mainState').datastorage.bot_meta.bot_settings
 
   var local_Tab = ''
@@ -91,27 +80,11 @@ var bot = (function() {
 
   var customProxyList;
   var customProxyListLength;
-  // var customProxyList = _getSetting('globals', ['settings_general', 'settings_general_proxylist']);
-  // var customProxyListLength = customProxyList.length;
-
 
   var returnObj = {};
   var currentReturnKey = '';
 
   var timeoutSaver;
-
-  // var local_consoleLogEnabled = false;
-
-  //GC SAVER
-  // setInterval(function () {
-  //   if (waiting) {
-  //     _consoleLog('waiting... protocol = '+protocol)
-  //   }
-  // }, 1000);
-
-
-
-
 
   function _selectElement (elem) {
     if (_getStatus() == 'stopped') { return }
@@ -131,9 +104,6 @@ var bot = (function() {
 
 
 function _cacheFix() {
-  // remote.getCurrentWebContents().session.setProxy({proxyRules: ''}, function() {/*callback*/}) // clear proxy
-  // ses.clearCache(callback)
-  // ses.clearStorageData([options, callback])
   if (local_botModule.respectCacheClear == true) {
     remote.getCurrentWebContents().session.clearCache(function(){
       // callback
@@ -164,10 +134,6 @@ function _cacheFix() {
 
       }
   );
-    // remote.getCurrentWebContents().session.clearStorageData();
-
-    // remote.getCurrentWebContents().session.clearCache(function() {/*callback*/}));
-    // // remote.getCurrentWebContents().session.clearStorageData();
 
     // send to webview
     ipcRenderer.send('module.command', local_TabKey, ['cacheFix']);

@@ -1,12 +1,11 @@
 # Somiibo
-A collection of Javascript utilities to streamline development.
+A collection of utilities to automate the web.
 
-[Site](https://somiibo.com/) | [NPM Module](https://www.npmjs.com/package/somiibo) | [GitHub Repo](https://github.com/somiibo/somiibo-library)
+[Site](https://somiibo.com) | [NPM Module](https://www.npmjs.com/package/somiibo) | [GitHub Repo](https://github.com/somiibo/somiibo-library)
 
 ## Installation
 Using npm:
 ```shell
-$ npm i -g npm
 $ npm i somiibo
 ```
 Note: add --save if you are using npm < 5.0.0
@@ -25,5 +24,5 @@ somiibo is a framework for developing modules to automate the web.
  * Creating complex artificial intelligence with ease
  * Share your modules with the world
 
-## Projects Using this Library
-[Somiibo](https://somiibo.com/): A Social Media Bot with an open-source module library.
+<!-- ## Projects Using this Library
+[Somiibo](https://somiibo.com/): A Social Media Bot with an open-source module library. -->
