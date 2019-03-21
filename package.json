@@ -1,6 +1,6 @@
 {
   "name": "somiibo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The official library for Somiibo. Develop your own modules for the Somiibo platform.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "ITW Creative Works",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/itw-creative-works/somiibo-npm/issues"
+    "url": "https://github.com/somiibo/somiibo-npm/issues"
   },
   "homepage": "https://somiibo.com"
 }
