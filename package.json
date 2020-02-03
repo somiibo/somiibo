@@ -1,6 +1,6 @@
 {
   "name": "somiibo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The official library for Somiibo. Develop your own modules for the Somiibo platform.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "social media bot"
   ],
   "author": "ITW Creative Works",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/somiibo/somiibo-npm/issues"
   },
